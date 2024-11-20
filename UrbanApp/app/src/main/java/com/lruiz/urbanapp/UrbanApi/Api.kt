@@ -18,30 +18,29 @@ import retrofit2.http.POST
 interface ApiService {
     @GET("api/productos")
     suspend fun getProductos(): ProductosApiResponse
-
     @GET("api/productos/{id}")
     suspend fun getProducto(@Path("id") id: Int): ProductoApiResponse
-
     @GET("api/CarritoProducto/user/{userId}")
     suspend fun getCarritoProducto(
         @Path("userId") userId: Int,
         @Query("carritoID") carritoID: Int
     ): CartItem
-
     @GET("api/WishList_Producto/user/{Id_Usuario}")
-    suspend fun getWhislistProducto(@Path("userId") userId: Int
+    suspend fun getWhislistProducto(@Path("Id_Usuario") userId: Int
     ): WhisItem
-       // @Query("whisID") whisID: Int
     @DELETE("api/CarritoProducto/{idproducto}/carrito/{idCarrito}")
     suspend fun deleteProductoFromCarrito(
            @Path("idproducto") idProducto: Int,
            @Path("idCarrito") idCarrito: Int
     ): Response<Unit>
-
-
+           //api/WishList_Producto/{idProducto}/wishlist/{idWishlist}
+    @DELETE("api/WishList_Producto/{idProducto}/wishlist/{idWishlist}")
+    suspend fun deleteProductoFromLDeseos(
+        @Path("idProducto") idProducto: Int,
+        @Path("idWishlist") idWishlist: Int
+    ): Response<Unit>
     @POST("api/carritoproducto")
     suspend fun addCarritoProducto(@Body carritoProducto: CarritoProductoRequest): Response<Unit>
-
     @POST("api/wishlist_producto")
     suspend fun addWhislistProducto(@Body WishLists_Producto: WhislistProductoRequest): Response<Unit>
 }

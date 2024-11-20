@@ -26,7 +26,6 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.SegmentedButtonDefaults.Icon
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TopAppBar
@@ -35,14 +34,12 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
@@ -52,9 +49,11 @@ import com.lruiz.urbanapp.ViewModels.ProductoViewModel
 import com.lruiz.urbanapp.components.BarraNavegacion
 import com.lruiz.urbanapp.components.TopBar
 import com.lruiz.urbanapp.data.ProductoDetalle
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.*
 import com.lruiz.urbanapp.ViewModels.whislistViewModel
+import androidx.compose.foundation.lazy.items
+import androidx.compose.material.icons.filled.Favorite
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -89,12 +88,15 @@ fun ScreenProducto(navController: NavHostController, customParam: Int?) {
             Log.d("ProductoList", "Contenido de producto: $producto")
             val firstProducto = producto.firstOrNull()  // Uso de firstOrNull para evitar NoSuchElementException
             if (firstProducto != null) {
-                Column(
+                LazyColumn(
                     modifier = Modifier
                         .padding(innerPadding)
                         .fillMaxSize()
                 ) {
-                    ProductoItemDetalle(firstProducto)  // Asumiendo que ProductoItemDetalle maneja correctamente null
+                    items(producto){ producto ->
+                        ProductoItemDetalle(producto)
+                    }
+                     // Asumiendo que ProductoItemDetalle maneja correctamente null
                 }
             } else {
                 Text(
@@ -113,11 +115,15 @@ fun ProductoItemDetalle(producto: ProductoDetalle) {
     val viewModel: whislistViewModel = viewModel()
     val viewModel2: CarritoViewModel = viewModel()
     var selectedQuantity by remember { mutableIntStateOf(1) }
-    Card(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(8.dp)
-    ) {
+
+    val whislistProductos by viewModel.WhislistProductos.collectAsState()
+    val isInWishlist = remember(whislistProductos) {
+        whislistProductos.any { it.idProducto == producto.idProducto }
+
+    }
+    LaunchedEffect(Unit) {
+        viewModel.getWhislistProductos() // Recargar la wishlist
+    }
         Column(
             modifier = Modifier
                 .fillMaxSize()
@@ -125,51 +131,45 @@ fun ProductoItemDetalle(producto: ProductoDetalle) {
                 .systemBarsPadding(),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            // Nombre del producto
-            Text(
-                text = " ${producto.nombreProducto}",
-                style = MaterialTheme.typography.titleLarge,
-                modifier = Modifier.padding(top = 16.dp)
-            )
-
-            // Ícono favorito
-            IconButton(
-                onClick = {
-                    viewModel.addWhislistAlCarrito(
-                        idwhis = 1,
-                        idProducto = producto.idProducto
-                    )
-                },
-                modifier = Modifier.align(Alignment.End)
-            ) {
-                Icon(
-                    imageVector = Icons.Default.FavoriteBorder,
-                    contentDescription = "Favorito",
-                    tint = Color.Red
+            Row {
+                Text(
+                    text = " ${producto.nombreProducto}",
+                    style = MaterialTheme.typography.titleLarge,
+                    modifier = Modifier.padding(top = 16.dp)
                 )
+                IconButton(
+                    onClick = {
+                        if (isInWishlist) {
+                          //  viewModel.deleteFromWishlist(producto.idProducto)
+                        } else {
+                            viewModel.addWhislistAlCarrito(
+                                idwhis = 1,
+                                idProducto = producto.idProducto
+                            )
+                        }
+                    }
+                ) {
+                    Icon(
+                        imageVector = if (isInWishlist) Icons.Default.Favorite else Icons.Default.FavoriteBorder,
+                        contentDescription = "Favorito",
+                        tint = if (isInWishlist) Color.Red else Color.Gray
+                    )
+                }
             }
-
-            // Imagen del producto (marcador de posición)
-            Spacer(modifier = Modifier.height(8.dp))
-            Box(
-                modifier = Modifier
-                    .size(200.dp)
-                    .padding(8.dp),
-                contentAlignment = Alignment.Center
-            ) {
+            Row {
                 Box(
                     modifier = Modifier
-                        .fillMaxSize()
-                        .background(Color.Gray.copy(alpha = 0.2f), RoundedCornerShape(8.dp))
-                )
-                AsyncImage(
-                    model = producto.urlImagen,
-                    contentDescription = null,
-                    contentScale = ContentScale.Crop
-                )
+                        .size(200.dp)
+                        .padding(8.dp),
+                    contentAlignment = Alignment.Center
+                ) {
+                    AsyncImage(
+                        model = producto.urlImagen,
+                        contentDescription = null,
+                        contentScale = ContentScale.Crop
+                    )
+                }
             }
-
-            // Precio y cantidad
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -190,32 +190,30 @@ fun ProductoItemDetalle(producto: ProductoDetalle) {
                     onQuantityChange = { newQuantity -> selectedQuantity = newQuantity }
                 )
             }
-
-            // Descripción
-            Spacer(modifier = Modifier.height(8.dp))
-            OutlinedTextField(
-                value = producto.descripcion,
-                onValueChange = {},
-                label = { Text("Descripción") },
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(100.dp)
-            )
-
-            // Botón Añadir al carrito
-            Spacer(modifier = Modifier.height(16.dp))
-            Button( onClick = {
-                viewModel2.addProductoAlCarrito(
-                    idCarrito = 1, // ID del carrito
-                    idProducto = producto.idProducto, // ID del producto actual
-                    cantidad = selectedQuantity // Por ejemplo, agregar 1 unidad
+            Row {
+                OutlinedTextField(
+                    value = producto.descripcion,
+                    onValueChange = {},
+                    label = { Text("Descripción") },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(100.dp)
                 )
             }
-            ) {
-                Text("Añadir al carrito")
+            Row {
+                Button(modifier = Modifier.weight(1f),
+                    onClick = {
+                        viewModel2.addProductoAlCarrito(
+                            idCarrito = 1, // ID del carrito
+                            idProducto = producto.idProducto, // ID del producto actual
+                            cantidad = selectedQuantity // Por ejemplo, agregar 1 unidad
+                        )
+                    }
+                ) {
+                    Text("Añadir al carrito")
+                }
             }
         }
-    }
 }
 
 

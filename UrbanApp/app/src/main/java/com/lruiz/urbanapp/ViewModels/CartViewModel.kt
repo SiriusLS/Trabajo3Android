@@ -72,10 +72,10 @@ class CarritoViewModel() : ViewModel() {
                 val response = withContext(Dispatchers.IO) {
                     apiService.deleteProductoFromCarrito(idProducto, idCarrito)
                 }
-
                 if (response.isSuccessful) {
                     _successMessage.value = true
                     Log.d("CarritoViewModel", "Producto eliminado del carrito correctamente")
+                    getCarritoProductos()
                 } else {
                     val errorBody = response.errorBody()?.string()
                     _errorMessage.value = "Error al eliminar producto del carrito: $errorBody"

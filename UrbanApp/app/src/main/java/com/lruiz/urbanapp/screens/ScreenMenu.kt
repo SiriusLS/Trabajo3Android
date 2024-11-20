@@ -38,7 +38,6 @@ import androidx.compose.foundation.lazy.items
 import androidx.navigation.NavController
 import com.lruiz.urbanapp.navigation.AppScreens
 
-
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ScreenMenu(navController: NavHostController) {

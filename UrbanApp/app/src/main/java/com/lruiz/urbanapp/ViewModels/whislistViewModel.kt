@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.lruiz.urbanapp.UrbanApi.RetrofitInstance
+import com.lruiz.urbanapp.UrbanApi.RetrofitInstance.apiService
 import com.lruiz.urbanapp.data.WhislistProductoRequest
 import com.lruiz.urbanapp.data.whislistDTO
 import kotlinx.coroutines.Dispatchers
@@ -20,6 +21,11 @@ class whislistViewModel() : ViewModel() {
 
     private val _errorMessage = MutableStateFlow<String?>(null)
     val errorMessage: StateFlow<String?> = _errorMessage
+
+    fun isProductInWishlist(productId: Int): Boolean {
+        return _WhislistProductos.value.any { it.idProducto == productId }
+    }
+
 
     fun getWhislistProductos() {
         viewModelScope.launch {
@@ -62,4 +68,30 @@ class whislistViewModel() : ViewModel() {
             }
         }
     }
+
+    private val _successMessage = MutableStateFlow<Boolean>(false)
+    val successMessage: StateFlow<Boolean> = _successMessage
+
+    fun deleteProductoFromWis(idProducto: Int, idWishlist: Int) {
+        viewModelScope.launch {
+            try {
+                val response = withContext(Dispatchers.IO) {
+                    apiService.deleteProductoFromLDeseos(idProducto, idWishlist)
+                }
+                if (response.isSuccessful) {
+                    _successMessage.value = true
+                    Log.d("WisViewModel", "Producto eliminado del fav correctamente")
+                    getWhislistProductos()
+                } else {
+                    val errorBody = response.errorBody()?.string() ?: "Error desconocido"
+                    _errorMessage.value = errorBody
+                    Log.e("WisViewModel", "Error al eliminar producto del fav: $idProducto $idWishlist ${_errorMessage.value}")
+                }
+            } catch (e: Exception) {
+                _errorMessage.value = "Excepción: ${e.message ?: "Error desconocido"}"
+                Log.e("WisViewModel", "No funcionó", e)
+            }
+        }
+    }
+
 }
