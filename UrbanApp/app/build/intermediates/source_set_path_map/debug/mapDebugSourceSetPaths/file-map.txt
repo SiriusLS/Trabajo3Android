@@ -1,0 +1,56 @@
+com.lruiz.urbanapp-navigation-common-ktx-2.7.2-0 C:\Users\lucia\.gradle\caches\transforms-4\009b3b8338deaf83923f5fff9cc2a9c2\transformed\navigation-common-ktx-2.7.2\res
+com.lruiz.urbanapp-lifecycle-runtime-release-1 C:\Users\lucia\.gradle\caches\transforms-4\018d487b08f4a3113ada0ad6070334e8\transformed\lifecycle-runtime-release\res
+com.lruiz.urbanapp-activity-1.9.2-2 C:\Users\lucia\.gradle\caches\transforms-4\02f3299becb07e69093c8ade4db7ab83\transformed\activity-1.9.2\res
+com.lruiz.urbanapp-lifecycle-runtime-compose-release-3 C:\Users\lucia\.gradle\caches\transforms-4\03e7d3721f18f6b445c30afe2361dfce\transformed\lifecycle-runtime-compose-release\res
+com.lruiz.urbanapp-customview-poolingcontainer-1.0.0-4 C:\Users\lucia\.gradle\caches\transforms-4\0596e3802bfc89850a98a0fd8bc7e6ab\transformed\customview-poolingcontainer-1.0.0\res
+com.lruiz.urbanapp-navigation-runtime-2.7.2-5 C:\Users\lucia\.gradle\caches\transforms-4\0a5a68491c8173771934b31197ef6658\transformed\navigation-runtime-2.7.2\res
+com.lruiz.urbanapp-runtime-release-6 C:\Users\lucia\.gradle\caches\transforms-4\1088b8be4c52fcf10622b33488d13d83\transformed\runtime-release\res
+com.lruiz.urbanapp-lifecycle-viewmodel-compose-release-7 C:\Users\lucia\.gradle\caches\transforms-4\15a9d0704b1c29a6193f48cea55f211f\transformed\lifecycle-viewmodel-compose-release\res
+com.lruiz.urbanapp-material3-release-8 C:\Users\lucia\.gradle\caches\transforms-4\1f353d3f97a2d96eea93e79cd10737cb\transformed\material3-release\res
+com.lruiz.urbanapp-lifecycle-process-2.8.7-9 C:\Users\lucia\.gradle\caches\transforms-4\2f0192ccbc7b7cf27217ea8128fd3598\transformed\lifecycle-process-2.8.7\res
+com.lruiz.urbanapp-ui-release-10 C:\Users\lucia\.gradle\caches\transforms-4\322d7474197434f23e079c54d4e8da2a\transformed\ui-release\res
+com.lruiz.urbanapp-emoji2-1.3.0-11 C:\Users\lucia\.gradle\caches\transforms-4\35de784c6ae8df3a7b95acaecaed8ae4\transformed\emoji2-1.3.0\res
+com.lruiz.urbanapp-ui-tooling-data-release-12 C:\Users\lucia\.gradle\caches\transforms-4\378144e6f2edbd0f3f22b6970521d81e\transformed\ui-tooling-data-release\res
+com.lruiz.urbanapp-savedstate-1.2.1-13 C:\Users\lucia\.gradle\caches\transforms-4\3f9711db62e6a1bba4f82b0bc11e6881\transformed\savedstate-1.2.1\res
+com.lruiz.urbanapp-material-icons-core-release-14 C:\Users\lucia\.gradle\caches\transforms-4\429fb21645f5aed0c440f6d19a311e14\transformed\material-icons-core-release\res
+com.lruiz.urbanapp-ui-graphics-release-15 C:\Users\lucia\.gradle\caches\transforms-4\5075594964e90144355ba68989e392aa\transformed\ui-graphics-release\res
+com.lruiz.urbanapp-ui-tooling-preview-release-16 C:\Users\lucia\.gradle\caches\transforms-4\50a93114b0a2a0667f6aa33db2eaa7bd\transformed\ui-tooling-preview-release\res
+com.lruiz.urbanapp-appcompat-resources-1.7.0-17 C:\Users\lucia\.gradle\caches\transforms-4\52de0618785b4a2dd1677010e7b7887f\transformed\appcompat-resources-1.7.0\res
+com.lruiz.urbanapp-activity-compose-1.9.2-18 C:\Users\lucia\.gradle\caches\transforms-4\549944aa34df4e4e9696d66fc43fac86\transformed\activity-compose-1.9.2\res
+com.lruiz.urbanapp-profileinstaller-1.4.1-19 C:\Users\lucia\.gradle\caches\transforms-4\589cfb354af5a0570d71675f4a1102d8\transformed\profileinstaller-1.4.1\res
+com.lruiz.urbanapp-ui-unit-release-20 C:\Users\lucia\.gradle\caches\transforms-4\5af00614146551fdb0db71e8f27b921c\transformed\ui-unit-release\res
+com.lruiz.urbanapp-material-ripple-release-21 C:\Users\lucia\.gradle\caches\transforms-4\5fd5c164329f15f815d75876a87afd41\transformed\material-ripple-release\res
+com.lruiz.urbanapp-ui-text-release-22 C:\Users\lucia\.gradle\caches\transforms-4\609ac70bf3fdc91005b6257e4a66f2a5\transformed\ui-text-release\res
+com.lruiz.urbanapp-navigation-compose-2.7.2-23 C:\Users\lucia\.gradle\caches\transforms-4\60b7af95706e66477ed19fdcfee10bd8\transformed\navigation-compose-2.7.2\res
+com.lruiz.urbanapp-core-1.13.1-24 C:\Users\lucia\.gradle\caches\transforms-4\61a33a840402c60af6838a50be7000aa\transformed\core-1.13.1\res
+com.lruiz.urbanapp-lifecycle-livedata-core-2.8.7-25 C:\Users\lucia\.gradle\caches\transforms-4\64818a7328c5e62b95fc54db1c059057\transformed\lifecycle-livedata-core-2.8.7\res
+com.lruiz.urbanapp-ui-util-release-26 C:\Users\lucia\.gradle\caches\transforms-4\6bad7bf368e86917e4b114d5c9d6b227\transformed\ui-util-release\res
+com.lruiz.urbanapp-core-runtime-2.2.0-27 C:\Users\lucia\.gradle\caches\transforms-4\6d4693953f50fa12c9ee42f0f5c357fe\transformed\core-runtime-2.2.0\res
+com.lruiz.urbanapp-navigation-common-2.7.2-28 C:\Users\lucia\.gradle\caches\transforms-4\74885dfaa38e9fee68be652e9fae2f45\transformed\navigation-common-2.7.2\res
+com.lruiz.urbanapp-lifecycle-viewmodel-savedstate-2.8.7-29 C:\Users\lucia\.gradle\caches\transforms-4\75a453d71d5c508074cf419bae09d486\transformed\lifecycle-viewmodel-savedstate-2.8.7\res
+com.lruiz.urbanapp-ui-test-manifest-1.7.0-30 C:\Users\lucia\.gradle\caches\transforms-4\7db3ebceef9a8eaf21f971b6b40ab901\transformed\ui-test-manifest-1.7.0\res
+com.lruiz.urbanapp-runtime-saveable-release-31 C:\Users\lucia\.gradle\caches\transforms-4\81e352c7e0f142158172ecdcdc7ea012\transformed\runtime-saveable-release\res
+com.lruiz.urbanapp-lifecycle-viewmodel-release-32 C:\Users\lucia\.gradle\caches\transforms-4\84160ceb263f6440f32c8e94959a3310\transformed\lifecycle-viewmodel-release\res
+com.lruiz.urbanapp-foundation-layout-release-33 C:\Users\lucia\.gradle\caches\transforms-4\8a1598cbf628215eec86c357146c5aef\transformed\foundation-layout-release\res
+com.lruiz.urbanapp-startup-runtime-1.1.1-34 C:\Users\lucia\.gradle\caches\transforms-4\98123cdff4385e50d429032a450e447a\transformed\startup-runtime-1.1.1\res
+com.lruiz.urbanapp-navigation-runtime-ktx-2.7.2-35 C:\Users\lucia\.gradle\caches\transforms-4\a1cb08e006d82428265949476ecdd506\transformed\navigation-runtime-ktx-2.7.2\res
+com.lruiz.urbanapp-core-ktx-1.13.1-36 C:\Users\lucia\.gradle\caches\transforms-4\a9853f62a9293fd995509ae6ec37f16a\transformed\core-ktx-1.13.1\res
+com.lruiz.urbanapp-lifecycle-runtime-ktx-release-37 C:\Users\lucia\.gradle\caches\transforms-4\ac9233661832e011189d3591303c1810\transformed\lifecycle-runtime-ktx-release\res
+com.lruiz.urbanapp-annotation-experimental-1.4.1-38 C:\Users\lucia\.gradle\caches\transforms-4\ad20f13491357791e99ad24a2bc48fc9\transformed\annotation-experimental-1.4.1\res
+com.lruiz.urbanapp-ui-geometry-release-39 C:\Users\lucia\.gradle\caches\transforms-4\b84d73b563e92868fab97dc7c146b809\transformed\ui-geometry-release\res
+com.lruiz.urbanapp-coil-core-release-40 C:\Users\lucia\.gradle\caches\transforms-4\bc205bc5ecf4d1963b7af991a29cadbc\transformed\coil-core-release\res
+com.lruiz.urbanapp-material-release-41 C:\Users\lucia\.gradle\caches\transforms-4\ca21e43feb916c2c62a2f9774b3a68ae\transformed\material-release\res
+com.lruiz.urbanapp-animation-release-42 C:\Users\lucia\.gradle\caches\transforms-4\d896f862d3268de5c6d4161e9eff861b\transformed\animation-release\res
+com.lruiz.urbanapp-animation-core-release-43 C:\Users\lucia\.gradle\caches\transforms-4\e23b8fa1fcc9dfce8cacbcfdc8d776b4\transformed\animation-core-release\res
+com.lruiz.urbanapp-activity-ktx-1.9.2-44 C:\Users\lucia\.gradle\caches\transforms-4\ec485282efda3f2f05b4f42e5735687a\transformed\activity-ktx-1.9.2\res
+com.lruiz.urbanapp-lifecycle-viewmodel-ktx-2.8.7-45 C:\Users\lucia\.gradle\caches\transforms-4\f7cf3e70121650d2642f438e97c08c35\transformed\lifecycle-viewmodel-ktx-2.8.7\res
+com.lruiz.urbanapp-foundation-release-46 C:\Users\lucia\.gradle\caches\transforms-4\fb535439071211eef06801b626b4b526\transformed\foundation-release\res
+com.lruiz.urbanapp-ui-tooling-release-47 C:\Users\lucia\.gradle\caches\transforms-4\fd6b217854b5c8969c00ee857882ca48\transformed\ui-tooling-release\res
+com.lruiz.urbanapp-savedstate-ktx-1.2.1-48 C:\Users\lucia\.gradle\caches\transforms-4\fd77d6d1b0a63382693a4004d165dc75\transformed\savedstate-ktx-1.2.1\res
+com.lruiz.urbanapp-graphics-path-1.0.1-49 C:\Users\lucia\.gradle\caches\transforms-4\fdbcdb271ddd2f40940b2a89d137f62c\transformed\graphics-path-1.0.1\res
+com.lruiz.urbanapp-resValues-50 C:\Users\lucia\OneDrive\Escritorio\S\UrbanApp_Lunes (2)\UrbanApp_retrofit2\UrbanApp_retrofit\UrbanApp\app\build\generated\res\resValues\debug
+com.lruiz.urbanapp-packageDebugResources-51 C:\Users\lucia\OneDrive\Escritorio\S\UrbanApp_Lunes (2)\UrbanApp_retrofit2\UrbanApp_retrofit\UrbanApp\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.lruiz.urbanapp-packageDebugResources-52 C:\Users\lucia\OneDrive\Escritorio\S\UrbanApp_Lunes (2)\UrbanApp_retrofit2\UrbanApp_retrofit\UrbanApp\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.lruiz.urbanapp-debug-53 C:\Users\lucia\OneDrive\Escritorio\S\UrbanApp_Lunes (2)\UrbanApp_retrofit2\UrbanApp_retrofit\UrbanApp\app\build\intermediates\merged_res\debug\mergeDebugResources
+com.lruiz.urbanapp-debug-54 C:\Users\lucia\OneDrive\Escritorio\S\UrbanApp_Lunes (2)\UrbanApp_retrofit2\UrbanApp_retrofit\UrbanApp\app\src\debug\res
+com.lruiz.urbanapp-main-55 C:\Users\lucia\OneDrive\Escritorio\S\UrbanApp_Lunes (2)\UrbanApp_retrofit2\UrbanApp_retrofit\UrbanApp\app\src\main\res
